@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="679.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="comp3111.coursescraper.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="437.0" prefWidth="719.0">
+      <children>
+            <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabMain" text="Main">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="221.0" prefWidth="719.0">
+                           <children>
+                              <Label layoutX="98.0" layoutY="67.0" prefHeight="17.0" prefWidth="66.0" text="Term" />
+                              <Label layoutX="98.0" layoutY="98.0" text="Subject" />
+                              <TextField fx:id="textfieldTerm" layoutX="164.0" layoutY="63.0" prefHeight="25.0" prefWidth="343.0" promptText="e.g 1830 (18: yr 18-19; 30: Spring)" text="1830" />
+                              <TextField fx:id="textfieldSubject" layoutX="164.0" layoutY="94.0" text="COMP" />
+                              <Button fx:id="buttonSearch" layoutX="458.0" layoutY="94.0" mnemonicParsing="false" onAction="#search" text="Search" />
+                              <Label layoutX="98.0" layoutY="35.0" text="Base URL" />
+                              <TextField fx:id="textfieldURL" layoutX="164.0" layoutY="31.0" prefHeight="25.0" prefWidth="343.0" text="https://w5.ab.ust.hk/wcq/cgi-bin/" />
+                              <Label layoutX="39.0" layoutY="185.0" text="Please note that during grading we will save the Base URL into another site and manually edit some data. Don't hardcode" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabStatistic" text="Backend">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="79.0" layoutY="44.0" text="* Handle 404 not found" />
+                              <Label layoutX="78.0" layoutY="61.0" text="* Re-structure the code to incorporate &quot;sections&quot;; Adding section code (L1, LA1, etc..) in the console output below" />
+                              <Label layoutX="96.0" layoutY="108.0" text="Total Number of difference sections in this search" />
+                              <Label layoutX="96.0" layoutY="133.0" text="Total Number of Courses in this search" />
+                              <Label layoutX="78.0" layoutY="78.0" text="* Add the following info to the console output" />
+                              <Label layoutX="96.0" layoutY="159.0" text="Instrctuors who has teaching assignment this term but does not need to teach at Tu 3:10pm" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab fx:id="tabFilter" text="Filter">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="722.0">
+                           <children>
+                              <CheckBox layoutX="162.0" layoutY="48.0" mnemonicParsing="false" text="AM" />
+                              <CheckBox layoutX="162.0" layoutY="65.0" mnemonicParsing="false" text="PM" />
+                              <CheckBox layoutX="243.0" layoutY="48.0" mnemonicParsing="false" text="Monday" />
+                              <CheckBox layoutX="243.0" layoutY="65.0" mnemonicParsing="false" text="Tuesday" />
+                              <CheckBox layoutX="243.0" layoutY="81.0" mnemonicParsing="false" text="Wednesday" />
+                              <CheckBox layoutX="243.0" layoutY="98.0" mnemonicParsing="false" text="Thursday" />
+                              <CheckBox layoutX="243.0" layoutY="115.0" mnemonicParsing="false" text="Friday" />
+                              <CheckBox layoutX="243.0" layoutY="132.0" mnemonicParsing="false" text="Saturday" />
+                              <Button layoutX="162.0" layoutY="14.0" mnemonicParsing="false" text="Select All" />
+                              <CheckBox layoutX="360.0" layoutY="48.0" mnemonicParsing="false" text="Common Core" />
+                              <CheckBox layoutX="360.0" layoutY="65.0" mnemonicParsing="false" text="No Exclusion" />
+                              <CheckBox layoutX="500.0" layoutY="48.0" mnemonicParsing="false" text="With Labs or Tutorial" />
+                              <Label layoutX="32.0" layoutY="278.0" prefHeight="41.0" prefWidth="642.0" text="* When the filter is applied, display all sections that fulfill all of these conditions; Print them to the console below on any change of checkbox" wrapText="true" />
+                              <Label layoutX="21.0" layoutY="88.0" prefHeight="175.0" prefWidth="199.0" text="A course has a section at that time/on that day. A section can be lecture/tutorial/lab. Click AM + Monday does not imply a course has a section on Monday morning. It means there is a section in the morning, but that section may not be on Monday. However, that course must have another Monday section." wrapText="true" />
+                              <Label layoutX="338.0" layoutY="107.0" prefHeight="162.0" prefWidth="144.0" text="Common Core refers to 4Y CC; No Exclusion refers to a course does not has any exclusion. Information can be founded on the pop-up text of the &quot;COURSE INFO&quot;" wrapText="true" />
+                              <Label layoutX="500.0" layoutY="66.0" prefHeight="83.0" prefWidth="206.0" text="The section code of a Lab must begins with LA, tutorial must begins with T. Code begins with R can be ignored." wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabList" text="List">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="719.0">
+                           <children>
+                              <TableView prefHeight="281.0" prefWidth="719.0">
+                                <columns>
+                                  <TableColumn prefWidth="91.0" text="Course Code" />
+                                    <TableColumn prefWidth="108.0" text="Lecture Section" />
+                                  <TableColumn prefWidth="271.0" text="Course Name" />
+                                    <TableColumn prefWidth="152.0" text="Instructor" />
+                                    <TableColumn prefWidth="96.0" text="Enroll" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="22.0" layoutY="281.0" text="*Fill the table according to the result of the Filter. If the Filter cannot be correctly implemented, show all result scrapped." />
+                              <Label layoutX="22.0" layoutY="299.0" text="All column are uneditable except Enroll. Each row in Enroll should contains a check box for user to enroll/unenroll a course" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabTimetable" text="Timetable">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="719.0">
+                           <children>
+                              <Separator layoutX="100.0" layoutY="35.0" prefHeight="3.0" prefWidth="600.0" />
+                              <Separator layoutX="100.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="200.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="300.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="400.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="500.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="600.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Separator layoutX="700.0" layoutY="1.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="1.0" />
+                              <Label layoutX="131.0" layoutY="14.0" text="Monday" />
+                              <Label layoutX="226.0" layoutY="14.0" text="Tuesday" />
+                              <Label layoutX="319.0" layoutY="14.0" text="Wednesday" />
+                              <Label layoutX="421.0" layoutY="14.0" text="Thursday" />
+                              <Label layoutX="532.0" layoutY="14.0" text="Friday" />
+                              <Label layoutX="624.0" layoutY="14.0" text="Saturday" />
+                              <Label layoutX="60.0" layoutY="40.0" prefHeight="20.0" prefWidth="40.0" text="0900" />
+                              <Label layoutX="60.0" layoutY="60.0" prefHeight="20.0" prefWidth="40.0" text="1000" />
+                              <Label layoutX="60.0" layoutY="80.0" prefHeight="20.0" prefWidth="40.0" text="1100" />
+                              <Label layoutX="60.0" layoutY="100.0" prefHeight="20.0" prefWidth="40.0" text="1200" />
+                              <Label layoutX="60.0" layoutY="120.0" prefHeight="20.0" prefWidth="40.0" text="1300" />
+                              <Label layoutX="60.0" layoutY="140.0" prefHeight="20.0" prefWidth="40.0" text="1400" />
+                              <Label layoutX="60.0" layoutY="240.0" prefHeight="20.0" prefWidth="40.0" text="1900" />
+                              <Label layoutX="60.0" layoutY="220.0" prefHeight="20.0" prefWidth="40.0" text="1800" />
+                              <Label layoutX="60.0" layoutY="200.0" prefHeight="20.0" prefWidth="40.0" text="1700" />
+                              <Label layoutX="60.0" layoutY="180.0" prefHeight="20.0" prefWidth="40.0" text="1600" />
+                              <Label layoutX="60.0" layoutY="160.0" prefHeight="20.0" prefWidth="40.0" text="1500" />
+                              <Label layoutX="60.0" layoutY="260.0" prefHeight="20.0" prefWidth="40.0" text="2000" />
+                              <Label layoutX="60.0" layoutY="280.0" prefHeight="20.0" prefWidth="40.0" text="2100" />
+                              <Label layoutX="60.0" layoutY="300.0" prefHeight="20.0" prefWidth="40.0" text="2200" />
+                              <Label text="Display all enrolled courses as a box (see example in the demo program). Boxes contain course code only. They can be overlapped." />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabAllSubject" text="All Subject Search">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="73.0" layoutY="29.0" mnemonicParsing="false" onAction="#allSubjectSearch" text="All Subject Search" />
+                              <ProgressBar fx:id="progressbar" layoutX="316.0" layoutY="33.0" prefHeight="18.0" prefWidth="264.0" progress="0.0" />
+                              <Label layoutX="255.0" layoutY="34.0" text="Progress" />
+                              <Label layoutX="65.0" layoutY="210.0" text="Total Number of Categories/Code Prefix" />
+                              <Label layoutX="65.0" layoutY="193.0" text="Total Number of Courses fetched" />
+                              <Label layoutX="45.0" layoutY="118.0" text="*Search all subjects when this button is click. (text typed in textfieldSubject is ignored)" />
+                              <Label layoutX="45.0" layoutY="144.0" text="*Progress bar needs to update when one subject is scraped." />
+                              <Label layoutX="45.0" layoutY="176.0" text="*correctly print the following info to the console below" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabSfq" text="SFQ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="82.0" layoutY="31.0" text="SFQ URL" />
+                              <TextField fx:id="textfieldSfqUrl" layoutX="147.0" layoutY="27.0" prefHeight="25.0" prefWidth="403.0" text="http://sfq.ust.hk/results/eng-f18.html" />
+                              <Button fx:id="buttonSfqEnrollCourse" layoutX="147.0" layoutY="64.0" mnemonicParsing="false" onAction="#findSfqEnrollCourse" text="Find SFQ with my enrolled courses" />
+                              <Button fx:id="buttonInstructorSfq" layoutX="384.0" layoutY="64.0" mnemonicParsing="false" onAction="#findInstructorSfq" text="List instructors' average SFQ" />
+                              <Label layoutX="42.0" layoutY="132.0" text="You may assume no login is required when you scrape the SFQ page" />
+                              <Label layoutX="42.0" layoutY="176.0" prefHeight="44.0" prefWidth="601.0" text="When Find SFQ button is clicked, unadjusted SFQ data will be printed (not the data inside [] ). If a course has multiple section, only the course average is needed." wrapText="true" />
+                              <Label layoutX="42.0" layoutY="233.0" prefHeight="72.0" prefWidth="622.0" text="When List instructors average button is clicked, all unadjusted SFQ data of sections taught by an instructor will be added and divided by number of sections he/she taught. Thus, there is no need to consider the number of students. We assume there will be no lab/tutorial section on this page." wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+      <Label text="Console" />
+      <ScrollPane prefHeight="387.0" prefWidth="719.0">
+         <content>
+            <TextArea fx:id="textAreaConsole" prefHeight="300.0" prefWidth="717.0" />
+         </content>
+      </ScrollPane>
+  </children>
+</VBox>
