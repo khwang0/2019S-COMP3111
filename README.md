@@ -151,7 +151,7 @@ Based on the above project requirements, prepare and submit
 	1. A use-case diagram (1%) 
 	1. The workload distribution among your team (1%)
 	1. A github link properly setup (visible to TA) (1%)
-1	Individual work
+1.	Individual work
 	1. A use-case specification of each of your tasks (1%)
 
 ## Activity 2 - Software Implementation and Testing (24%)
