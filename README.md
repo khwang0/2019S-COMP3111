@@ -155,11 +155,11 @@ Based on the above project requirements, prepare and submit
 	1. A use-case specification of each of your tasks (1%)
 
 ## Activity 2 - Software Implementation and Testing (24%)
-1.	Team work
-	1. A README file stating the name of team members and their tasks assigned.
+1.	Team work - Submit to canvas
 	1. At least 3 meeting minutes. (1%) (submitted at the end of this course)
 	1. A Gantt chart and a burn down chart. (1%)
-1. Team work but mark individually
+1. Team work but mark individually - Submit to Github
+	1. A README file stating the name of team members and their tasks assigned.
 	1. A running program and the source code. (8% for each completed task, total 16% for a student)
 	1. Unit testing of your implemented tasks. (100% pass - 2%; 0% otherwise) 
 		* Even if you are failed to implement all tasks, the unit testing is still required.
@@ -178,7 +178,21 @@ We expect most of the students will finish the project with reasonable efforts. 
 * Testing on JavaFX may require additional framework (TestFX) which will not be covered in the course. It is optional for you to use it or not. 
 * Check the Issue page for and FAQ questions.
 
-	
+---
+# Grading process
+
+The TA will perform the following in a lab machine.
+```
+git clone <YOUR_URL> .
+git log # to make sure the last update is before the project due. 
+gradlew build
+gradlew jacocoTestReport
+gradlew javadoc
+gradlew run
+```
+You will be invited to appeal at a later time if your code does not work.
+
+
 ---
 # Course Scraper
 
