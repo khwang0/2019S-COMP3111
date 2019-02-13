@@ -156,18 +156,19 @@ Based on the above project requirements, prepare and submit
 
 ## Activity 2 - Software Implementation and Testing (24%)
 1.	Team work
-	1. A running program and the source code. (8% for each completed task, total 16% for a student)
 	1. A README file stating the name of team members and their tasks assigned.
 	1. At least 3 meeting minutes. (1%) (submitted at the end of this course)
 	1. A Gantt chart and a burn down chart. (1%)
-1.	Individual work - Even if you are failed to implement all tasks, the unit testing and coverage report are still required.
-	1. Unit testing of your implemented tasks. (100% pass - 2%; 0% otherwise)  
 1. Team work but mark individually
+	1. A running program and the source code. (8% for each completed task, total 16% for a student)
+	1. Unit testing of your implemented tasks. (100% pass - 2%; 0% otherwise) 
+		* Even if you are failed to implement all tasks, the unit testing is still required.
 	1. Coverage test (>65% branch coverage- 2% ; 45-65% branch coverage - 1%; 0% otherwise)
+		* Even if you are failed to implement all tasks, the coverage test is still required.
 	1. Git commit log at GitHub
-		1. At least three "non-trivial" commits and one "non-trivial" pull request (1%)
+		1. At least three "non-trivial" commits and one "non-trivial" pull request (per student) (1%)
 	1. Documenting your implemented features using JavaDoc (Full mark 1%: -0.25% for each missing argument, return value, exception, class description)
-		1. If a function is responsible by more than one student, all of them will receive the penalty.
+		* If a function is responsible by more than one student, all of them will receive the penalty.
 	1. *Notes: In case full mark is not given to the group, marks will be given to student individually based on the completion of their tasks.*
 
 We expect most of the students will finish the project with reasonable efforts. They will most likely receive full marks.
