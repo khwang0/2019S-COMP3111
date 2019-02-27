@@ -3,10 +3,11 @@ package comp3111.coursescraper;
 import java.util.Map;
 import java.util.HashMap;
 import java.time.LocalTime;
+import java.util.Locale;
 import java.time.format.DateTimeFormatter;
 
 public class Slot {
-	private int day; 
+	private int day;
 	private LocalTime start;
 	private LocalTime end;
 	private String venue;
@@ -16,7 +17,7 @@ public class Slot {
 		for (int i = 0; i < DAYS.length; i++)
 			DAYS_MAP.put(DAYS[i], i);
 	}
-			
+
 	@Override
 	public Slot clone() {
 		Slot s = new Slot();
@@ -51,7 +52,7 @@ public class Slot {
 	 * @param start the start to set
 	 */
 	public void setStart(String start) {
-		this.start = LocalTime.parse(start, DateTimeFormatter.ofPattern("hh:mma"));
+		this.start = LocalTime.parse(start, DateTimeFormatter.ofPattern("hh:mma", Locale.US));
 	}
 	/**
 	 * @return the end
@@ -63,7 +64,7 @@ public class Slot {
 	 * @param end the end to set
 	 */
 	public void setEnd(String end) {
-		this.end = LocalTime.parse(end, DateTimeFormatter.ofPattern("hh:mma"));
+		this.end = LocalTime.parse(end, DateTimeFormatter.ofPattern("hh:mma", Locale.US));
 	}
 	/**
 	 * @return the venue
@@ -90,5 +91,5 @@ public class Slot {
 	public void setDay(int day) {
 		this.day = day;
 	}
-	
+
 }
