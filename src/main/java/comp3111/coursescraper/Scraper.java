@@ -16,18 +16,18 @@ import java.util.Vector;
 /**
  * WebScraper provide a sample code that scrape web content. After it is constructed, you can call the method scrape with a keyword, 
  * the client will go to the default url and parse the page by looking at the HTML DOM.  
- * <br/>
+ * <br>
  * In this particular sample code, it access to HKUST class schedule and quota page (COMP). 
- * <br/>
+ * <br>
  * https://w5.ab.ust.hk/wcq/cgi-bin/1830/subject/COMP
- *  <br/>
+ *  <br>
  * where 1830 means the third spring term of the academic year 2018-19 and COMP is the course code begins with COMP.
- * <br/>
+ * <br>
  * Assume you are working on Chrome, paste the url into your browser and press F12 to load the source code of the HTML. You might be freak
  * out if you have never seen a HTML source code before. Keep calm and move on. Press Ctrl-Shift-C (or CMD-Shift-C if you got a mac) and move your
  * mouse cursor around, different part of the HTML code and the corresponding the HTML objects will be highlighted. Explore your HTML page from
  * body &rarr; div id="classes" &rarr; div class="course" &rarr;. You might see something like this:
- * <br/>
+ * <br>
  * <pre>
  * {@code
  * <div class="course">
@@ -63,7 +63,7 @@ import java.util.Vector;
  * </div>
  *}
  *</pre>
- * <br/>
+ * <br>
  * The code 
  * <pre>
  * {@code
@@ -105,12 +105,7 @@ public class Scraper {
 		}
 
 	}
-	/**
-	 * The only method implemented in this class, to scrape web content from the given URL
-	 * 
-	 * @param keyword - the keyword you want to search
-	 * @return A list of Item that has found. A zero size list is return if nothing is found. Null if any exception (e.g. no connectivity)
-	 */
+
 	public List<Course> scrape(String baseurl, String term, String sub) {
 
 		try {

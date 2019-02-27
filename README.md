@@ -146,26 +146,29 @@ Please pay attention to the keywords used in this document to avoid any confusio
 ## Activity 1 - System Requirement Specification (6%)
 
 Based on the above project requirements, prepare and submit
-1. A data model diagram (2%) 
-1. A use-case diagram (1%) 
-1. A use-case specification (1%)
-1. The workload distribution among your team (1%)
-1. A github link properly setup (visible to TA) (1%)
+1.	Team work
+	1. A data model diagram (2%) 
+	1. A use-case diagram (1%) 
+	1. The workload distribution among your team (1%)
+	1. A github link properly setup (visible to TA) (1%)
+1.	Individual work
+	1. A use-case specification of each of your tasks (1%)
 
 ## Activity 2 - Software Implementation and Testing (24%)
-1.	Team work
-	1. A running program and the source code. (8% for each completed task, total 16% for a student)
-	1. A README file stating the name of team members and their tasks assigned.
+1.	Team work - Submit to canvas
 	1. At least 3 meeting minutes. (1%) (submitted at the end of this course)
 	1. A Gantt chart and a burn down chart. (1%)
-1.	Individual work - Even if you are failed to implement all tasks, the unit testing and coverage report are still required.
-	1. Unit testing of your implemented tasks. (100% pass - 2%; 0% otherwise)  
-1. Team work but mark individually
+1. Team work but mark individually - Submit to Github
+	1. A README file stating the name of team members and their tasks assigned.
+	1. A running program and the source code. (8% for each completed task, total 16% for a student)
+	1. Unit testing of your implemented tasks. (100% pass - 2%; 0% otherwise) 
+		* Even if you are failed to implement all tasks, the unit testing is still required.
 	1. Coverage test (>65% branch coverage- 2% ; 45-65% branch coverage - 1%; 0% otherwise)
+		* Even if you are failed to implement all tasks, the coverage test is still required.
 	1. Git commit log at GitHub
-		1. At least three "non-trivial" commits and one "non-trivial" pull request (1%)
+		1. At least three "non-trivial" commits and one "non-trivial" pull request (per student) (1%)
 	1. Documenting your implemented features using JavaDoc (Full mark 1%: -0.25% for each missing argument, return value, exception, class description)
-		1. If a function is responsible by more than one student, all of them will receive the penalty.
+		* If a function is responsible by more than one student, all of them will receive the penalty.
 	1. *Notes: In case full mark is not given to the group, marks will be given to student individually based on the completion of their tasks.*
 
 We expect most of the students will finish the project with reasonable efforts. They will most likely receive full marks.
@@ -175,7 +178,21 @@ We expect most of the students will finish the project with reasonable efforts. 
 * Testing on JavaFX may require additional framework (TestFX) which will not be covered in the course. It is optional for you to use it or not. 
 * Check the Issue page for and FAQ questions.
 
-	
+---
+# Grading process
+
+The TA will perform the following in a lab machine.
+```
+git clone <YOUR_URL> .
+git log # to make sure the last update is before the project due. 
+gradlew build
+gradlew jacocoTestReport
+gradlew javadoc
+gradlew run
+```
+You will be invited to appeal at a later time if your code does not work.
+
+
 ---
 # Course Scraper
 
