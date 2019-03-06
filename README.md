@@ -12,7 +12,7 @@
 
 You are going to form a team of three to work on a project. The project is about web scraping - obtaining and analysis data
 from some websites automatically. You are given a skeleton code written in Java 8 that is already able to fetch some data 
-from the course enrollment website. Please try the [demo program](demo.jar) to have a better idea of what the skeleton code can 
+from the course enrollment website. Please try the [demo program](courseScraper-0.1.0.jar) to have a better idea of what the skeleton code can 
 do. You need Java 8 JDK to run and develop it. At the end of the file there is a guide to compile the project. **Note: If
 As JavaFX is removed since Java 11. You will be needed to install JavaFX11 manually if you are using JRE 11 or JDK 11.**
 
