@@ -2,11 +2,18 @@
 ## Project Problem Statement and Activities
 
 
+
+
 > **Activity 1 Due (6%): 18-3-2019 (Wk 7 Mon) 20:00**
 > Submission details will be provided on Canvas
 >
 > **Activity 2 Due (24%): 29-4-2019 (Wk 12 Mon) 20:00**
 > Submission details will be provided at Canvas
+
+## Import Updates
+
+* 14/3/2019: We have turned off the issue section on this github and instead we are going to use Piazza for project clarification. 
+
 
 ## Introduction
 
