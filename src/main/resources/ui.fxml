@@ -82,7 +82,7 @@
                               <TableView prefHeight="281.0" prefWidth="719.0">
                                 <columns>
                                   <TableColumn prefWidth="91.0" text="Course Code" />
-                                    <TableColumn prefWidth="108.0" text="Lecture Section" />
+                                    <TableColumn prefWidth="108.0" text="Section" />
                                   <TableColumn prefWidth="271.0" text="Course Name" />
                                     <TableColumn prefWidth="152.0" text="Instructor" />
                                     <TableColumn prefWidth="96.0" text="Enroll" />
