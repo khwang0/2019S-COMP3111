@@ -7,7 +7,7 @@
 > **Activity 1 Due (6%): 18-3-2019 (Wk 7 Mon) 20:00**
 > Submission details will be provided on Canvas
 >
-> **Activity 2 Due (24%): 29-4-2019 (Wk 12 Mon) 20:00**
+> **Activity 2 Due (24%): ~~29-4-2019 (Wk 12 Mon)~~ 1-5-2019 (Wk 12 Wed) 20:00**
 > Submission details will be provided at Canvas
 
 ## Import Updates
